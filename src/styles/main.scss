@@ -1,0 +1,188 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #263850;
+    font-family: sans-serif;
+    padding: 25px 250px;
+    overflow-x: hidden;
+}
+
+
+
+.app{
+
+    .cart{
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        padding: 10px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img{
+            width: 25px;
+        }
+    }
+
+    .title{
+        color: #fff;
+        margin-bottom: 25px;
+        font-size: 1.1rem;
+    }
+
+    .cardContainer{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-bottom: 50px;
+    }
+
+    .card {
+        border-radius: 5px;
+        width: 275px;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        background-color: lightgray;
+        row-gap: 25px;
+
+        img{
+            width: 100%;
+            height: 250px;
+        }
+
+        div{
+            width: 100%;
+            display: flex;
+
+            p{
+                color: #333;
+                margin-bottom: 0px;
+                font-size: 1rem;
+            }
+
+            .price{
+                font-weight: bold;
+                margin-left: auto;
+            }
+        }
+
+        button{
+            padding: 10px 20px;
+            
+            background-color: #354b68;
+            color : #fff;
+            outline: none;
+            border: none;
+            cursor : pointer;
+
+            &:active{
+                background-color: #1d2b3d;
+            }
+        }
+    }
+
+    .cartOverlay{
+        width: 100vw;
+        height: 100vh;
+        background-color: #000000a1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .cartModal{
+            width: 550px;
+            background-color: lightgray;
+            border-radius: 5px;
+            padding: 40px 40px 20px 40px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            position: relative;
+
+            .itemCart{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+
+                img{
+                    width: 65px;
+                    border-radius: 3px;
+                }
+
+                select{
+                    margin-left: auto;
+                    padding: 8px;
+                    width: 65px;
+                    border: none;
+                    border-radius: 2px;
+                    outline: none;
+                }
+
+                button{
+                    padding: 8px 10px;
+                    background-color: #354b68;
+                    border: none;
+                    outline: none;
+                    color: #fff;
+                    cursor: pointer;
+                    border-radius: 2px;
+
+                    &:active{
+                        background-color: #263850;
+                    }
+                }
+            }
+
+            p{
+                span{
+                    font-weight:bold;
+                }
+            }
+
+            .checkout{
+                padding: 8px 10px;
+                    background-color: #354b68;
+                    border: none;
+                    outline: none;
+                    color: #fff;
+                    cursor: pointer;
+                    border-radius: 2px;
+                    width: 150px;
+                    align-self: center;
+
+                    &:active{
+                        background-color: #263850;
+                    }
+            }
+
+            .closeModal{
+                width: 30px;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    
+}
+
+
